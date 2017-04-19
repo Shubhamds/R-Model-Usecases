@@ -1,0 +1,34 @@
+##Once the model is run, Summary function will show the summary of the model as below. Numbers shown are hypothetical.
+
+
+> summary(Campaignmodel)
+ 
+Call:
+lm(formula = Revenue ~ Internet_Campaign + TV + Radio + Print + Phone + Referral)
+ 
+Coefficients:
+                    Estimate        Std. Error      t value            Pr(>|t|)   
+(Intercept)        9561.4286         1700.5869       5.622             0.00492 **
+Print              1.2465            0.8100          1.539             0.19865   
+TV                 0.9193            1.0766          0.854             0.44126   
+Internet           3.5161            0.9584          3.669             0.02141 * 
+Radio              0.5413            0.2300          0.600             0.20014
+Phone              0.7689            0.3578          0.713             0.56770
+Referral           1.7608            0.9456          0.897             0.80238
+
+
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+ 
+Residual standard error: 938.2 on 4 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared: 0.8479,     Adjusted R-squared: 0.7389 
+F-statistic: 4.954 on 3 and 4 DF,  p-value: 0.0847 
+
+## Total Sales = (sales with no advertising) + (Internet contribution per dollar*internet expenditure) + (Print contribution per dollar*Print expenditure)+(TV contribution per dollar*TV expenditure)+(Radio contribution per dollar*Radio expenditure)+(Phone contribution per dollar*Phone expenditure)+(Referral contribution per dollar*Referral expenditure)
+
+Total Sales = 9561.4286 + (3.5161*internet expenditure) + (1.2465*Print expenditure)+(.9193*TV expenditure)+(.5413*Radio expenditure)+(.7689*Phone s
+expenditure)+(1.7608*Referral expenditure)
+
+
+## Model is predicting the proportion in which campaign budget is to be splitted with a accuracy of 84.79 (Multiple R-squared: 0.8479)
+
